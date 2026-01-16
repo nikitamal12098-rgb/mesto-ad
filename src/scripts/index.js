@@ -80,6 +80,7 @@ const createUserBadge = (user) => {
   const userItem = template.content.cloneNode(true);
   const badge = userItem.querySelector(".popup__list-item_type_badge");
 
+  badge.backgroundImage = `url(${user.avatar})`;
   badge.textContent = user.name || user.about || "Аноним";
 
   return userItem;
